@@ -6,7 +6,6 @@ mysql_service 'default' do
 end
 
 mysql_config 'default' do
-  #NOTE: The example path in the docs is mysite.cnf.erb, which won't work
   source 'my.cnf.erb'
   notifies :restart, 'mysql_service[default]'
   action :create
