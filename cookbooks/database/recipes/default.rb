@@ -7,6 +7,7 @@ end
 
 mysql_config 'default' do
   source 'my.cnf.erb'
+  cookbook 'mysql'
   notifies :restart, 'mysql_service[default]'
   action :create
 end
